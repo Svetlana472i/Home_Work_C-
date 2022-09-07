@@ -11,6 +11,11 @@ bool resultBy = double.TryParse(Console.ReadLine(), out double By);
 Console.WriteLine("Введите координату z точки B");
 bool resultBz = double.TryParse(Console.ReadLine(), out double Bz);
 
+if(resultAx != true || resultAy != true || resultAz != true || resultBx != true ||resultBy != true || resultBz != true)
+{
+    Console.WriteLine("Вы ввели не вещественные числа");
+    return;
+}
 double GetLength(double x1, double y1, double z1, double x2, double y2, double z2)
 {
     double temp = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2-z1), 2));
