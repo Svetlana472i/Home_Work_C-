@@ -1,19 +1,21 @@
 ﻿Console.WriteLine("Введите координату x точки A");
-int Ax = Convert.ToInt32(Console.ReadLine());
+bool resultAx = double.TryParse(Console.ReadLine(), out double Ax);
 Console.WriteLine("Введите координату y точки A");
-int Ay = Convert.ToInt32(Console.ReadLine());
+bool resultAy = double.TryParse(Console.ReadLine(), out double Ay);
 Console.WriteLine("Введите координату z точки A");
-int Az = Convert.ToInt32(Console.ReadLine());
+bool resultAz = double.TryParse(Console.ReadLine(), out double Az);
 Console.WriteLine("Введите координату x точки B");
-int Bx = Convert.ToInt32(Console.ReadLine());
+bool resultBx = double.TryParse(Console.ReadLine(), out double Bx);
 Console.WriteLine("Введите координату y точки B");
-int By = Convert.ToInt32(Console.ReadLine());
+bool resultBy = double.TryParse(Console.ReadLine(), out double By);
 Console.WriteLine("Введите координату z точки B");
-int Bz = Convert.ToInt32(Console.ReadLine());
-double GetLength(int x1, int y1, int z1, int x2, int y2, int z2)
+bool resultBz = double.TryParse(Console.ReadLine(), out double Bz);
+
+double GetLength(double x1, double y1, double z1, double x2, double y2, double z2)
 {
     double temp = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2-z1), 2));
     return temp;
 }
+
 double length = GetLength(Ax, Ay, Az, Bx, By, Bz);
 Console.WriteLine($"Расстояние между точками равно {length}");
