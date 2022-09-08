@@ -13,7 +13,7 @@ double[] FillArray(int Length)
     Random random = new Random();
     for (int i = 0; i < length; i++)
     {
-        array[i] = random.Next(-100, 101);
+        array[i] = random.NextDouble() * (101+100) -100;
     }
     return array;
 }
