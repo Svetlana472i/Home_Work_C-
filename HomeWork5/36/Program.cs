@@ -32,7 +32,7 @@ Console.WriteLine("]");
 int SumNumberInOddPositionInArray(int[] array)
 {
     int countNumber = 0;
-    for (int i = 0; i < array.Length; i=i + 2)
+    for (int i = 1; i < array.Length; i=i + 2)
     {
         countNumber = countNumber + array[i];
     }
