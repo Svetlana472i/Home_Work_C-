@@ -31,16 +31,29 @@ Console.WriteLine("]");
 
 double GetMaxNumberInArray(double[] array)
 {
-    double maxNumber == array[1];
+    double maxNumber = array[1];
     for (int i = 0; i < array.Length; i++)
         if (array[i] > maxNumber)
         {
-            maxNumber == array[i];
+            maxNumber = array[i];
         }
     return maxNumber;
+}
+
+double GetMinNumberInArray(double[] array)
+{
+    double minNumber = array[1];
+    for (int i = 0; i < array.Length; i++)
+        if (array[i] < minNumber)
+        {
+            minNumber = array[i];
+        }
+    return minNumber;
 }
 
 double[] array = FillArray(length);
 PrintArray(array);
 double maxNumber = GetMaxNumberInArray(array);
-Console.WriteLine($"Разница между максимальным и минимальным элементом равна {maxNumber}");
+double minNumber = GetMinNumberInArray(array);
+double result = maxNumber - minNumber;
+Console.WriteLine($"Разница между максимальным и минимальным элементом равна {result}");
