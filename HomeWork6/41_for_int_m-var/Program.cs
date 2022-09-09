@@ -8,11 +8,11 @@ double[] FillArray(int m)
 {
     for (i = 0; i < m; i++)
     {
-      Console.WriteLine($"Введите {i+1}-е число");
+      Console.WriteLine($"Введите {i+1}-е число, если хотите закончить, введите любой символ, не являющийся рациональным числом");
       bool isNumberArray = double.TryParse(Console.ReadLine(), out inputArray[i]);
       if (!isNumberArray)
       {
-        Console.WriteLine("Число введено неверно");
+        Console.WriteLine("Вы завершили ввод чисел");
         return a;
       }
       
