@@ -22,10 +22,8 @@ if (k1 == k2)
 double[] cutLines= new double[2];
 double[] GetCutLines(double k1, double b1, double k2, double b2)
 {
-    double x = (b2 - b1) / (k1 - k2);
-    double y = k1 * x + b1;
-    cutLines[0] = x;
-    cutLines[1] = y;
+    cutLines[0] = (b2 - b1) / (k1 - k2);
+    cutLines[1] = k1 * cutLines[0] + b1;
     return cutLines;
 }
 void PrintArray(double[] arr)
@@ -39,7 +37,7 @@ void PrintArray(double[] arr)
 }
 
 double[] result = GetCutLines(k1, b1, k2, b2);
-Console.Write("Прямые пересекаются в точке с координатами: ");
+Console.Write($"Прямые, заданные уравнениями y={k1}*x+{b1} и y={k2}*x+{b2} пересекаются в точке с координатами: ");
 PrintArray(cutLines);
 
 
