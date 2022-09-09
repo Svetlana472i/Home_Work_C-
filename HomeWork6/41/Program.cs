@@ -35,4 +35,4 @@ void PrintArray(double[] arr)
 double[] array = FillArray(m);
 Console.Write("Вы ввели следующие числа: ");
 PrintArray(array);
-Console.WriteLine($"Среди них {count} чисел больше 0");
+Console.WriteLine($"Среди них {count} больше 0");
