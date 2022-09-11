@@ -66,6 +66,6 @@ void PrintArray(double[] array)
 int[,] result = FillArray(m,n);
 Console.WriteLine("Задан масив");
 Print2DArray(result);
-Console.Write("Среднее арирфметическое каждого столбца: ");
+Console.Write("Среднее арирфметическое столбцов: ");
 double[] ArithmeticMeanСоlumn = GetArithmeticMeanСоlumn(result);
 PrintArray(ArithmeticMeanСоlumn);
