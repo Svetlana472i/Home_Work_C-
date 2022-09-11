@@ -22,7 +22,7 @@ int[,] FillArray(int m, int n)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i,j] = random.Next(0,100);
+            array[i,j] = random.Next(0,10);
         }
     }
     return array;
@@ -36,13 +36,14 @@ int[] SearchIndex(int [,] array, int a)
     for (int i = 0; i < array.GetLength(0); i++)
         {
          for (int j = 0; j < array.GetLength(1); j++)
-         if (array[i, j] == a)
-            { 
-                arr[0] = i;
-                arr[1] = j;
-            }
+            if (array[i, j] == a)
+                { 
+                    arr[0] = i;
+                    arr[1] = j;
+                    return arr;   
+                }
          } 
-    return arr;
+    return arr;     
 }
 
 void Print2DArray(int[,] array)
@@ -57,6 +58,15 @@ void Print2DArray(int[,] array)
     }
 }
 
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length-1; i++)
+    {
+        Console.Write($"{array[i]}, ");
+    }
+    Console.WriteLine($"{array[array.Length-1]}");
+}
+
 int[,] result = FillArray(m,n);
 Console.WriteLine("Задан масив");
 Print2DArray(result);
@@ -67,5 +77,8 @@ if (foundIndex[1] == -1)
 }
 else
 {
-    Console.WriteLine($"Число {a} находится на пересечении {foundIndex[0]} строки и {foundIndex[1]} столбца");
+    //Console.WriteLine($"Число {a} находится на пересечении {foundIndex[0]} строки и {foundIndex[1]} столбца");
+    Console.Write($"Индексы числа {a} : ");
+    PrintArray(foundIndex);
 }
+
