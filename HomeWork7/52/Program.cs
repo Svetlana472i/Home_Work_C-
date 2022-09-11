@@ -56,10 +56,11 @@ void Print2DArray(int[,] array)
 
 void PrintArray(double[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length-1; i++)
     {
         Console.Write($"{array[i]}, ");
     }
+    Console.Write($"{array[array.Length-1]}, ");
 }
 
 int[,] result = FillArray(m,n);
