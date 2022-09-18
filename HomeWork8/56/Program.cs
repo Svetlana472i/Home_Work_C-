@@ -70,3 +70,4 @@ int[] result1 = GetStringSum(result);
 int stringMinSum = GetMin(result1);
 Console.Write("Номер строки с наименьшей суммой элементов:");
 Console.WriteLine(stringMinSum+1);
+//В примере нумерация сток начинаестся с 1-й//
